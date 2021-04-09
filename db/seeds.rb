@@ -211,9 +211,36 @@
 #   { name: "Showtime" },
 # ])
 
-movie_w_network = Movie.all
+# movie_w_network = Movie.all
 
-movie_w_network.each do |movie|
-  network_title = NetworkTitle.new(network_id: movie.network, movie_id: movie.id)
-  network_title.save
-end
+# movie_w_network.each do |movie|
+#   network_title = NetworkTitle.new(network_id: movie.network, movie_id: movie.id)
+#   network_title.save
+# end
+
+# gt = GenreTitle.create(movie_id: 1, genre_id: 7)
+# gt = GenreTitle.create(movie_id: 1, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 1, genre_id: 17)
+# gt = GenreTitle.create(movie_id: 2, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 2, genre_id: 7)
+# gt = GenreTitle.create(movie_id: 2, genre_id: 18)
+# gt = GenreTitle.create(movie_id: 3, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 3, genre_id: 17)
+# gt = GenreTitle.create(movie_id: 3, genre_id: 9)
+# gt = GenreTitle.create(movie_id: 4, genre_id: 4)
+# gt = GenreTitle.create(movie_id: 4, genre_id: 5)
+# gt = GenreTitle.create(movie_id: 4, genre_id: 7)
+# gt = GenreTitle.create(movie_id: 4, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 5, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 5, genre_id: 17)
+# gt = GenreTitle.create(movie_id: 6, genre_id: 1)
+# gt = GenreTitle.create(movie_id: 6, genre_id: 15)
+# gt = GenreTitle.create(movie_id: 7, genre_id: 2)
+# gt = GenreTitle.create(movie_id: 7, genre_id: 4)
+# gt = GenreTitle.create(movie_id: 7, genre_id: 3)
+# gt = GenreTitle.create(movie_id: 8, genre_id: 4)
+# gt = GenreTitle.create(movie_id: 8, genre_id: 7)
+# gt = GenreTitle.create(movie_id: 9, genre_id: 4)
+# gt = GenreTitle.create(movie_id: 9, genre_id: 7)
+# gt = GenreTitle.create(movie_id: 9, genre_id: 17)
+# gt = GenreTitle.create(movie_id: 10, genre_id: 4)

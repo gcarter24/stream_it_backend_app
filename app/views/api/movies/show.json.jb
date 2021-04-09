@@ -9,7 +9,7 @@
   runtime_minutes: @movie.runtime_minutes,
   media_type: @movie.media_type,
   language: @movie.language,
-  # genres: @movie.genres,
+  genres: @movie.genres.id,
   network: @movie.network,
   image: @movie.image,
   streaming_url: @movie.streaming_url,
