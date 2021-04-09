@@ -1,4 +1,4 @@
 class NetworkTitle < ApplicationRecord
-  # belongs_to :movie
-  # belongs_to :network
+  belongs_to :movie
+  belongs_to :network
 end

@@ -214,6 +214,6 @@
 movie_w_network = Movie.all
 
 movie_w_network.each do |movie|
-  network_title = NetworkTitle.new(network_id: movie.network, title_id: movie.id )
+  network_title = NetworkTitle.new(network_id: movie.network, movie_id: movie.id)
   network_title.save
-end 
+end
