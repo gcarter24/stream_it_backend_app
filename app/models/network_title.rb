@@ -1,0 +1,2 @@
+class NetworkTitle < ApplicationRecord
+end
