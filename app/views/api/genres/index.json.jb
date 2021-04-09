@@ -1,0 +1,6 @@
+@genres.map do |genre|
+  {
+    id: genre.id,
+    name: genre.name,
+  }
+end
