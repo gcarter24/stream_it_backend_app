@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
-  has_many :genre_titles
-  has_many :genres, through: :genre_titles
+  has_many :movie_genres
+  has_many :genres, through: :movie_genres
+  has_many :movie_networks
+  has_many :networks, through: :movie_networks
 end

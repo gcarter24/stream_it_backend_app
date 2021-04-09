@@ -1,4 +1,4 @@
 class Network < ApplicationRecord
-  has_many :network_titles
-  has_many :movies, through: :network_titles
+  has_many :movie_networks
+  has_many :movies, through: :movie_networks
 end
