@@ -9,8 +9,14 @@
   runtime_minutes: @movie.runtime_minutes,
   media_type: @movie.media_type,
   language: @movie.language,
-  genres: @movie.genres.id,
-  network: @movie.network,
+  genres: @movie.genres.map do |genre| {
+    id: genre.id,
+    name: genre.name,
+  }   end,
+  network: @movie.networks.map do |network| {
+    id: network.id,
+    name: network.name,
+  }   end,
   image: @movie.image,
   streaming_url: @movie.streaming_url,
 }
