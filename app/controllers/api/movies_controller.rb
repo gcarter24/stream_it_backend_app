@@ -1,22 +1,6 @@
 class Api::MoviesController < ApplicationController
   def index
-    @movies_year = Movie.where({ year: params[:search] })
-    @movies_rating = Movie.where({ rating: params[:search] })
-    @movies_type = Movie.where({ media_type: params[:search] })
-    @movies_language = Movie.where({ language: params[:search] })
-
-    if @movies == @movies_year
-      return @movies_year.sample
-    elsif @movies == @movies_rating
-      return @movies_rating.sample
-    elsif @movies == @movies_type
-      return @movies_type.sample
-    elsif @movies == @movies_language
-      return @movies_language.sample
-    else
-      @movies = Movie.order(:id => :asc)
-    end
-
+    @movies = Movie.order(:id => :asc)
     render "index.json.jb"
   end
 
@@ -28,34 +12,43 @@ class Api::MoviesController < ApplicationController
 
   def random
     # random movie
-    @movie = Movie.find(Movie.pluck(:id).sample)
-
+    # @movie = Movie.find(Movie.pluck(:id).sample)
     # random movie based on year
-    # @movie = Movie.where({ year: params[:search] }).sample
-
-    # # random movie based on rating
-    # @movie = Movie.where(rating: params[:search]).sample
-
-    # # random movie based on media type
-    # @movie = Movie.where(media_type: params[:search]).sample
-
-    # # random movie based on language
-    # @movie = Movie.where(language: params[:search]).sample
-
+    @movies_year = Movie.where(year: params[:search])
+    # random movie based on rating
+    @movies_rating = Movie.where(rating: params[:search])
+    # random movie based on media type
+    @movies_type = Movie.where(media_type: params[:search])
+    # random movie based on language
+    @movies_language = Movie.where(language: params[:search])
     # random movie based on runtime
-    # @movie = Movie.where(runtime_minutes: params[:search]).sample
+    @movies_runtime = Movie.where(runtime_minutes: params[:search])
+    # random movie based on network
+    # @movie_network = Network.find_by(id: params[:network_id])
+    # @movie_by_network = @movie_network.movies
 
-    #random movie based on network(id,  then later name)
-    #random movie based on genre(id,  then later name)
-    # random movie based around runtime
+    #random movie based on genre
+    # @movie_genre = Genre.find_by(id: params[:genre_id])
+    user_input = params[:search]
 
-    # @movies = Movie.where("network LIKE ?", "%#{params[:search]}%")
-    # @movies = Movie.where(network: 1)
+    if user_input == @movies_year
+      @movie = @movies_year.sample
+    elsif user_input == @movies_rating
+      @movie = @movies_rating.sample
+    elsif user_input == @movies_type
+      @movie = @movies_type.sample
+    elsif user_input == @movies_language‹
+      @movie = @movies_language.sample
+    elsif user_input == @movies_runtime
+      @movie = @movies_runtime.sample
+      # elsif @movie == @movie_network
+      #   @movie_by_network.sample
+      # elsif @movie == @movie_genre
+      #   @movie_genre.sample
+    else
+      @movie = Movie.find(Movie.pluck(:id).sample)
+    end
 
-    render "show.json.jb"
+    render "random.json.jb"
   end
-
-  # def search
-  #   @movies = Movie.search(params[:search_from], params[:search_to])
-  # end
 end
