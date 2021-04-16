@@ -388,6 +388,11 @@
 # mg = MovieGenre.create(movie_id: 59, genre_id: 40)
 # mg = MovieGenre.create(movie_id: 59, genre_id: 39)
 # mg = MovieGenre.create(movie_id: 59, genre_id: 21)
+mg = MovieGenre.create(movie_id: 60, genre_id: 3)
+mg = MovieGenre.create(movie_id: 60, genre_id: 4)
+mg = MovieGenre.create(movie_id: 60, genre_id: 8)
+mg = MovieGenre.create(movie_id: 60, genre_id: 21)
+
 # mg = MovieGenre.create(movie_id: 61, genre_id: 4)
 # mg = MovieGenre.create(movie_id: 61, genre_id: 32)
 # mg = MovieGenre.create(movie_id: 62, genre_id: 23)

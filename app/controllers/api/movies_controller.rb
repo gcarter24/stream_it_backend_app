@@ -15,7 +15,7 @@ class Api::MoviesController < ApplicationController
     # random movie
     # @movie = Movie.find(Movie.pluck(:id).sample)
     # random movie based on year
-    @movies_year = Movie.where(rating: params[:year])
+    @movies_year = Movie.where(year: params[:year])
     # # random movie based on rating
     @movies_rating = Movie.where(rating: params[:rating])
     # # random movie based on media type
