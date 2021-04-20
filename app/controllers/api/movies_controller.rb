@@ -46,6 +46,8 @@ class Api::MoviesController < ApplicationController
     @movies_year = Movie.where(year: params[:year]).sample
     # # # random movie based on rating
     @movies_rating = Movie.where(rating: params[:rating]).sample
+    # # # random movie based on rating and year
+    # @year_rating = @movies_year & @movies_rating
     # # # random movie based on media type
     @movies_type = Movie.where(media_type: params[:media_type]).sample
     # # # random movie based on language
@@ -79,8 +81,16 @@ class Api::MoviesController < ApplicationController
       @network = Network.find_by(name: params[:network])
       @network_movies = @network.movies
       @final_movie = @network_movies.sample
-    else
+    elsif params
       @final_movie = Movie.find(Movie.pluck(:id).sample)
+      # else
+      #   @m = Movie.where(year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type])
+      #   @genre = Genre.find_by(name: params[:genre])
+      #   genre_movies = @genre.movies
+      #   @network = Network.find_by(name: params[:network])
+      #   network_movies = @network.movies
+      #   @movie = @m & genre_movies & network_movies
+      #   @final_movie = @movie.sample
     end
   end
 end

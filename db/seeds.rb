@@ -193,7 +193,15 @@
 #   { title: "The Godfather", plot: "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.", runtime_minutes: 175, year: 1972, rating: "R", language: "en", watchmode_id: 1394258, network: 7, user_rating: "9.3", media_type: "movie", image: "https://cdn.watchmode.com/posters/01394258_poster_w185.jpg", streaming_url: "https://www.showtime.com/#/movie/3500980" },
 #   { title: "Some Like It Hot", plot: "Two musicians witness a mob hit and struggle to find a way out of the city before they are found by the gangsters. Their only opportunity is to join an all-girl band as they leave on a tour. To make their getaway they must first disguise themselves as women, then keep their identities secret and deal with the problems this brings - such as an attractive bandmate and a very determined suitor.", runtime_minutes: 122, year: 1959, rating: "NR", language: "en", watchmode_id: 1353858, network: 1, user_rating: "8.0", media_type: "movie", image: "https://cdn.watchmode.com/posters/01353858_poster_w185.jpg", streaming_url: "https://watch.amazon.com/detail?asin=B00D5WTW4K&&creativeASIN=B00D5WTW4K&ie=UTF8&linkCode=xm2&" },
 #   { title: "X-Men: Evolution", plot: "X-Men: Evolution is an American animated television series about the Marvel Comics superhero team X-Men. In this incarnation, many of the characters are teenagers rather than adults. The series ran for a total of four seasons from November 2000 until October 2003 on Kids' WB, which has made it the third longest-running Marvel Comics animated series, behind only Fox Kids' X-Men and Spider-Man animated series. The series began running on Disney XD on June 15, 2009.", runtime_minutes: 22, year: 2000, rating: "TV-Y7", language: "en", watchmode_id: 3145756, network: 5, user_rating: "7.8", media_type: "tv_series", image: "https://cdn.watchmode.com/posters/03145756_poster_w185.jpg", streaming_url: "https://www.hulu.com/watch/f9619b48-c4d7-49c0-bd4c-d3a3422b693e" },
-#   { title: "X-Men: Evolution", plot: "X-Men: Evolution is an American animated television series about the Marvel Comics superhero team X-Men. In this incarnation, many of the characters are teenagers rather than adults. The series ran for a total of four seasons from November 2000 until October 2003 on Kids' WB, which has made it the third longest-running Marvel Comics animated series, behind only Fox Kids' X-Men and Spider-Man animated series. The series began running on Disney XD on June 15, 2009.", runtime_minutes: 22, year: 2000, rating: "TV-Y7", language: "en", watchmode_id: 3145756, network: 5, user_rating: "7.8", media_type: "tv_series", image: "https://cdn.watchmode.com/posters/03145756_poster_w185.jpg", streaming_url: "https://www.hulu.com/watch/f9619b48-c4d7-49c0-bd4c-d3a3422b693e" },
+#   { "title": "Pinky and the Brain",
+# "plot": "Pinky and Brain are genetically enhanced laboratory mice who reside in a cage in the Acme Labs research facility. Brain is self-centered and scheming; Pinky is good-natured but feebleminded. In each episode, Brain devises a new plan to take over the world, which ultimately ends in failure, usually due to Pinky's idiocy, the impossibility of Brain's plan, Brain's own arrogance, or just circumstances beyond their control.",
+# "year": 1995,
+# "rating": "TV-Y7",
+# "runtime_minutes": 15,
+# "media_type": "tv_series",
+# "language": "English",
+# "image": " https://cdn.watchmode.com/posters/0393074_poster_w185.jpg",
+# "streaming_url": "http://www.hulu.com/watch/a76d968a-1547-4c87-8a08-67c970006750" },
 #   { title: "How to Succeed in Business Without Really Trying", plot: "A young but bright former window cleaner rises to the top of his company by following the advice of a book about ruthless advancement in business.", runtime_minutes: 121, year: 1967, rating: "NR", language: "en", watchmode_id: 1171404, network: 1, user_rating: "7.5", media_type: "movie", image: "https://cdn.watchmode.com/posters/01171404_poster_w185.jpg", streaming_url: "http://www.amazon.com/gp/product/B07HZ423PH?" },
 #   { title: "Shark Tank", plot: "Aspiring entrepreneurs pitch various business ideas to \"The Sharks\" -- tough, self-made, multi-millionaire and billionaire tycoons -- in hopes of landing an investment.", runtime_minutes: 42, year: 2009, rating: "TV-PG", language: "en", watchmode_id: 1171404, network: 5, user_rating: "7.5", media_type: "tv_series", image: "https://cdn.watchmode.com/posters/03106263_poster_w185.jpg", streaming_url: "https://www.hulu.com/watch/e8431928-92fd-4ed2-91fe-43ca4245216f" },
 #   { title: "Catfish: The TV Show", plot: "Nev and his co-hosts -- from Max to Kamie to celebrity guests -- help people in dubious online relationships track down their baes IRL so they can sort out what's fact and what's fiction.", runtime_minutes: 42, year: 2012, rating: "TV-14", language: "en", watchmode_id: 320406, network: 5, user_rating: "7.1", media_type: "tv_series", image: "https://cdn.watchmode.com/posters/0320406_poster_w185.jpg", streaming_url: "http://www.hulu.com/watch/675a1c1a-c839-4acc-b476-df52015cf0b8" },
@@ -403,6 +411,11 @@
 # mg = MovieGenre.create(movie_id: 65, genre_id: 26)
 # mg = MovieGenre.create(movie_id: 66, genre_id: 6)
 # mg = MovieGenre.create(movie_id: 66, genre_id: 29)
+# mg = MovieGenre.create(movie_id: 67, genre_id: 6)
+# mg = MovieGenre.create(movie_id: 67, genre_id: 5)
+# mg = MovieGenre.create(movie_id: 68, genre_id: 5)
+# mg = MovieGenre.create(movie_id: 68, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 68, genre_id: 17)
 
 # movies = Movie.all
 
@@ -486,3 +499,32 @@
 # mn = MovieNetwork.create(movie_id: 64, network_id: 5)
 # mn = MovieNetwork.create(movie_id: 65, network_id: 1)
 # mn = MovieNetwork.create(movie_id: 66, network_id: 4)
+# mn = MovieNetwork.create(movie_id: 67, network_id: 6)
+# mn = MovieNetwork.create(movie_id: 68, network_id: 6)
+
+# Movie.create({
+#   "watchmode_id": "1631827",
+#   "title": "Why Did You Kill Me?",
+#   "plot": "The line between justice and revenge blurs when a devastated family uses social media to track down the people who killed 24-year-old Crystal Theobald.",
+#   "media_type": "movie",
+#   "runtime_minutes": 83,
+#   "year": 2021,
+#   "language": "English",
+#   "user_rating": 5.8,
+#   "rating": "R",
+#   "image": "https://cdn.watchmode.com/posters/01631827_poster_w185.jpg",
+#   "streaming_url": "https://www.netflix.com/title/80991050",
+# })
+# Movie.create({
+#   "watchmode_id": 1616830,
+#   "title": "Night in Paradise - 낙원의 밤",
+#   "plot": "An assassin named Tae-goo is offered a chance to switch sides with his rival Bukseong gang, headed by Chairman Doh. Tae-goo rejects the offer that results in the murder of his sister and niece. In revenge, Tae-goo brutally kills Chairman Doh and his men and flees to Jeju Island where he meets Jae-yeon, a terminally ill woman. Though, the henchman of the Bukseong gang, Executive Ma is mercilessly hunting Tae-goo to take revenge.",
+#   "media_type": "movie",
+#   "runtime_minutes": 131,
+#   "year": 2020,
+#   "user_rating": 6.5,
+#   "rating": "NR",
+#   "language": "Korean",
+#   "image": "https://cdn.watchmode.com/posters/01616830_poster_w185.jpg",
+#   "streaming_url": "https://www.netflix.com/title/81342504",
+# })
