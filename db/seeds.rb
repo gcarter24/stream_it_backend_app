@@ -692,23 +692,23 @@
 
 # mg = MovieGenre.create(movie_id: 79, genre_id: 7)
 # mg = MovieGenre.create(movie_id: 79, genre_id: 10)
-Movie.create({
-  "watchmode_id": 1582601,
-  "title": "Palm Springs",
-  "plot": "When carefree Nyles and reluctant maid of honor Sarah have a chance encounter at a Palm Springs wedding, things get complicated when they find themselves unable to escape the venue, themselves, or each other.",
-  "media_type": "movie",
-  "runtime_minutes": 90,
-  "year": 2020,
-  "user_rating": 7.5,
-  "rating": "R",
-  "language": "English",
-  "image": "https://cdn.watchmode.com/posters/01582601_poster_w185.jpg",
-  "streaming_url": "https://www.hulu.com/watch/f70dfd4d-dbfb-46b8-abb3-136c841bba11",
-})
-mn = MovieNetwork.create(movie_id: 80, network_id: 5)
+# Movie.create({
+#   "watchmode_id": 1582601,
+#   "title": "Palm Springs",
+#   "plot": "When carefree Nyles and reluctant maid of honor Sarah have a chance encounter at a Palm Springs wedding, things get complicated when they find themselves unable to escape the venue, themselves, or each other.",
+#   "media_type": "movie",
+#   "runtime_minutes": 90,
+#   "year": 2020,
+#   "user_rating": 7.5,
+#   "rating": "R",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01582601_poster_w185.jpg",
+#   "streaming_url": "https://www.hulu.com/watch/f70dfd4d-dbfb-46b8-abb3-136c841bba11",
+# })
+# mn = MovieNetwork.create(movie_id: 80, network_id: 5)
 
-mg = MovieGenre.create(movie_id: 80, genre_id: 4)
-mg = MovieGenre.create(movie_id: 80, genre_id: 14)
-mg = MovieGenre.create(movie_id: 80, genre_id: 9)
-mg = MovieGenre.create(movie_id: 80, genre_id: 13)
-mg = MovieGenre.create(movie_id: 80, genre_id: 15)
+# mg = MovieGenre.create(movie_id: 80, genre_id: 4)
+# mg = MovieGenre.create(movie_id: 80, genre_id: 14)
+# mg = MovieGenre.create(movie_id: 80, genre_id: 9)
+# mg = MovieGenre.create(movie_id: 80, genre_id: 13)
+# mg = MovieGenre.create(movie_id: 80, genre_id: 15)

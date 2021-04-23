@@ -55,7 +55,7 @@ class Api::MoviesController < ApplicationController
     # # # random movie based on language
     @movies_language = Movie.where(language: params[:language]).sample
     # # # random movie based on runtime
-    @movies_runtime = Movie.where(runtime_minutes: params[:runtime_minutes]).sample
+    @movies_runtime = Movie.where("runtime_minutes <= :runtime_minutes AND runtime_minutes >= :runtime_minutes", runtime_minutes: params[:runtime_minutes])
     # # random movie based on network
     # @network = Network.find_by(name: params[:network])
     # @network_movies = @network.movies
@@ -65,31 +65,37 @@ class Api::MoviesController < ApplicationController
     # @genre = Genre.find_by(name: params[:genre])
     # @genre_movies = @genre.movies
 
+    # ALL WORKING. ONLY WORKING TOP DOWN/INDIVIDUAL PARAMS. THE CODE IN RANDOM ACTION FOR ALL PARAMS, DOES NOT WORK WITH THIS LOGIC CURRENTLY. NEED TO ADD MULTIPLE PARAMS FUNCTIONALITY AND GET WORKING WITH ALL PARAMS TO THEN COMBINE AND ADD TO THE FRONTEND
     final_params = {}
-    # ALL WORKING EXCEPT COMMENTED OUT. ONLY WORKING TOP DOWN/INDIVIDUAL PARAMS. ALL PARAMS DO NOT WORK WITH THIS LOGIC CURRENTLY. NEED TO ADD MULTIPLE FUNCTIONALITY AND GET WORKING WITH ALL TO COMBINE AND THEN ADD TO THE FRONTEND
+
     if params[:year]
       final_params[:year] = params[:year]
+      @final_movie = Movie.where(final_params).sample
     elsif params[:rating]
       final_params[:rating] = params[:rating]
+      @final_movie = Movie.where(final_params).sample
     elsif params[:media_type]
       final_params[:media_type] = params[:media_type]
+      @final_movie = Movie.where(final_params).sample
     elsif params[:language]
       final_params[:language] = params[:language]
+      @final_movie = Movie.where(final_params).sample
     elsif params[:runtime_minutes]
       final_params[:runtime_minutes] = params[:runtime_minutes]
-      # elsif params[:genre]
-      #   @genre = Genre.find_by(name: params[:genre])
-      #   @final_movie = @genre.movies.sample
-      # elsif params[:network]
-      #   @network = Network.find_by(name: params[:network])
-      #   @final_movie = @network.movies.sample
+      @final_movie = Movie.where(final_params).sample
+    elsif params[:genre]
+      @genre = Genre.find_by(name: params[:genre])
+      @final_movie = @genre.movies.sample
+    elsif params[:network]
+      @network = Network.find_by(name: params[:network])
+      @final_movie = @network.movies.sample
     else
       @final_movie = Movie.find(Movie.pluck(:id).sample)
     end
 
     # final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
 
-    @final_movie = Movie.where(final_params).sample
+    # @final_movie = Movie.where(final_params).sample
     render "test.json.jb"
   end
 end
