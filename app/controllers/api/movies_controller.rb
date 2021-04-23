@@ -65,32 +65,31 @@ class Api::MoviesController < ApplicationController
     # @genre = Genre.find_by(name: params[:genre])
     # @genre_movies = @genre.movies
 
-    if (@m = Movie.where(year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type])
-      @genre = Genre.find_by(name: params[:genre])
-      @network = Network.find_by(name: params[:network])
-      @movie = @m & @genre.movies & @network.movies
-      @final_movie = @movie.sample)
-    elsif params[:year]
-      @final_movie = @movies_year
+    final_params = {}
+
+    if params[:year]
+      final_params[:year] = params[:year]
     elsif params[:rating]
-      @final_movie = @movies_rating
-    elsif params[:year] && params[:rating]
-      final_movie = (@movies_year & @movies_rating)
+      final_params[:rating] = params[:rating]
     elsif params[:media_type]
-      @final_movie = @movies_type
-    elsif params[:runtime_minutes]
-      @final_movie = @movies_runtime
+      final_params[:media_type] = params[:media_type]
     elsif params[:language]
-      @final_movie = @movies_language
-    elsif params[:genre]
-      @genre = Genre.find_by(name: params[:genre])
-      @final_movie = @genre.movies.sample
+      final_params[:language] = params[:language]
+    elsif params[:runtime_minutes]
+      final_params[:runtime_minutes] = params[:runtime_minutes]
+      # elsif params[:genre]
+      #   @genre = Genre.find_by(name: params[:genre])
+      #   @final_movie = @genre.movies.sample
       # elsif params[:network]
       #   @network = Network.find_by(name: params[:network])
       #   @final_movie = @network.movies.sample
     else
       @final_movie = Movie.find(Movie.pluck(:id).sample)
     end
+
+    # final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
+
+    @final_movie = Movie.where(final_params).sample
     render "test.json.jb"
   end
 end
@@ -109,3 +108,9 @@ end
 # elsif @m == Movie.where(rating: "R")
 #   @@final_movie = @m.sample
 # end
+
+# TROUBLESHOOT THESE - THEY DID WORK NOW THEY DONT
+# elsif (@m = Movie.where(year: params[:year], rating: params[:rating])
+#   @final_movie = @m.sample)
+# elsif (@m = Movie.where(year: params[:year], media_type: params[:media_type])
+# @final_movie = @m.sample)
