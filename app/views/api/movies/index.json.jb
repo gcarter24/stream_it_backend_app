@@ -13,7 +13,7 @@
     id: genre.id,
     name: genre.name,
   }   end,
-  network: movie.networks[0].name,
+  network: movie.networks,
   image: movie.image,
   streaming_url: movie.streaming_url,
 } end

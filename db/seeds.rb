@@ -416,6 +416,8 @@
 # mg = MovieGenre.create(movie_id: 68, genre_id: 5)
 # mg = MovieGenre.create(movie_id: 68, genre_id: 7)
 # mg = MovieGenre.create(movie_id: 68, genre_id: 17)
+# mg = MovieGenre.create(movie_id: 69, genre_id: 40)
+# mg = MovieGenre.create(movie_id: 69, genre_id: 7)
 
 # movies = Movie.all
 
@@ -500,7 +502,8 @@
 # mn = MovieNetwork.create(movie_id: 65, network_id: 1)
 # mn = MovieNetwork.create(movie_id: 66, network_id: 4)
 # mn = MovieNetwork.create(movie_id: 67, network_id: 6)
-# mn = MovieNetwork.create(movie_id: 68, network_id: 6)
+# mn = MovieNetwork.create(movie_id: 68, network_id: 7)
+# mn = MovieNetwork.create(movie_id: 69, network_id: 4)
 
 # Movie.create({
 #   "watchmode_id": "1631827",
@@ -527,4 +530,17 @@
 #   "language": "Korean",
 #   "image": "https://cdn.watchmode.com/posters/01616830_poster_w185.jpg",
 #   "streaming_url": "https://www.netflix.com/title/81342504",
+# })
+# Movie.create({
+#   "watchmode_id": 3162553,
+#   "title": "The Nevers",
+#   "plot": "In the last years of Victoria's reign, London is beset by the \"Touched\": people — mostly women — who suddenly manifest abnormal abilities, some charming, some very disturbing. Among them are Amalia True, a mysterious, quick-fisted widow, and Penance Adair, a brilliant young inventor. They are the champions of this new underclass, making a home for the Touched, while fighting the forces of… well, pretty much all the forces — to make room for those whom history as we know it has no place.",
+#   "media_type": "tv_series",
+#   "runtime_minutes": 52,
+#   "year": 2021,
+#   "user_rating": 7.3,
+#   "rating": "TV-MA",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/03162553_poster_w185.jpg",
+#   "streaming_url": "https://play.hbomax.com/episode/urn:hbo:episode:GYBlnIQ1z0hxBFAEAAAAD",
 # })

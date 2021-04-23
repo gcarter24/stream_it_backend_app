@@ -8,8 +8,12 @@
   runtime_minutes: @final_movie.runtime_minutes,
   media_type: @final_movie.media_type,
   language: @final_movie.language,
-  genres: @genre.name,
-  network: @network.name,
+  genres: @final_movie.genres.map do |genre| {
+    name: genre.name,
+  }   end,
+  network: @final_movie.networks.map do |network| {
+    name: network.name,
+  }   end,
   image: @final_movie.image,
   streaming_url: @final_movie.streaming_url,
 }
