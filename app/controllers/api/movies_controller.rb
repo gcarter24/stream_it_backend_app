@@ -66,7 +66,7 @@ class Api::MoviesController < ApplicationController
     # @genre_movies = @genre.movies
 
     final_params = {}
-
+    # ALL WORKING EXCEPT COMMENTED OUT. ONLY WORKING TOP DOWN/INDIVIDUAL PARAMS. ALL PARAMS DO NOT WORK WITH THIS LOGIC CURRENTLY. NEED TO ADD MULTIPLE FUNCTIONALITY AND GET WORKING WITH ALL TO COMBINE AND THEN ADD TO THE FRONTEND
     if params[:year]
       final_params[:year] = params[:year]
     elsif params[:rating]
