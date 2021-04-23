@@ -544,3 +544,171 @@
 #   "image": "https://cdn.watchmode.com/posters/03162553_poster_w185.jpg",
 #   "streaming_url": "https://play.hbomax.com/episode/urn:hbo:episode:GYBlnIQ1z0hxBFAEAAAAD",
 # })
+# Movie.create({
+#   "watchmode_id": 1563088,
+#   "title": "Nomadland",
+#   "plot": "A woman in her sixties embarks on a journey through the western United States after losing everything in the Great Recession, living as a van-dwelling modern-day nomad.",
+#   "media_type": "movie",
+#   "runtime_minutes": 108,
+#   "year": 2020,
+#   "user_rating": 7.3,
+#   "rating": "R",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01563088_poster_w185.jpg",
+#   "streaming_url": "https://www.hulu.com/movie/nomadland-dcd9cb83-0636-46ef-8cbd-b9d994672e83",
+# })
+# mn = MovieNetwork.create(movie_id: 70, network_id: 5)
+# mg = MovieGenre.create(movie_id: 70, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 70, genre_id: 19)
+# Movie.create({
+#   "watchmode_id": 1559743,
+#   "title": "Mortal Kombat",
+#   "plot": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.",
+#   "media_type": "movie",
+#   "runtime_minutes": 110,
+#   "year": 2021,
+#   "user_rating": 6.6,
+#   "rating": "R",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01559743_poster_w500.jpg",
+#   "streaming_url": "https://play.hbomax.com/feature/urn:hbo:feature:GYGYKfQwaKLheqwEAAAEC",
+# })
+# mn = MovieNetwork.create(movie_id: 71, network_id: 4)
+# mg = MovieGenre.create(movie_id: 71, genre_id: 1)
+# mg = MovieGenre.create(movie_id: 71, genre_id: 2)
+# mg = MovieGenre.create(movie_id: 71, genre_id: 9)
+# Movie.create({
+#   "watchmode_id": 1493742,
+#   "title": "Stowaway",
+#   "plot": "A three-person crew on a mission to Mars faces an impossible choice when an unplanned passenger jeopardizes the trip. Facing dwindling resources and a potentially fatal outcome, the crew is forced to make an impossible decision.",
+#   "media_type": "movie",
+#   "runtime_minutes": 116,
+#   "year": 2021,
+#   "user_rating": 5.5,
+#   "rating": "TV-MA",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01493742_poster_w185.jpg",
+#   "streaming_url": "https://www.netflix.com/watch/81321986",
+# })
+# mn = MovieNetwork.create(movie_id: 72, network_id: 6)
+# mg = MovieGenre.create(movie_id: 72, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 72, genre_id: 15)
+# mg = MovieGenre.create(movie_id: 72, genre_id: 17)
+# Movie.create({
+#   "watchmode_id": 3166163,
+#   "title": "Big Shot",
+#   "plot": "After getting ousted from his job in the NCAA for throwing a chair at a referee, a hothead men’s basketball coach Marvyn Korn must take a job at Westbrook School for Girls, a private all-girls high school, in an effort to redeem what's left of his career and reputation.",
+#   "media_type": "tv_series",
+#   "runtime_minutes": 45,
+#   "year": 2021,
+#   "user_rating": 6.8,
+#   "rating": "TV-PG",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/03166163_poster_w185.jpg",
+#   "streaming_url": "https://www.disneyplus.com/video/9231207c-e87d-48ff-8fa8-3eb7711b934e",
+# })
+# mn = MovieNetwork.create(movie_id: 73, network_id: 3)
+# mg = MovieGenre.create(movie_id: 73, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 73, genre_id: 4)
+# mg = MovieGenre.create(movie_id: 73, genre_id: 8)
+# Movie.create({
+#   "watchmode_id": 1629773,
+#   "title": "Seaspiracy",
+#   "plot": "Passionate about ocean life, a filmmaker sets out to document the harm that humans do to marine species — and uncovers an alarming global conspiracy.",
+#   "media_type": "movie",
+#   "runtime_minutes": 89,
+#   "year": 2021,
+#   "user_rating": 8.4,
+#   "rating": "NR",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01629773_poster_w185.jpg",
+#   "streaming_url": "http://www.netflix.com/title/81014008",
+# })
+# mn = MovieNetwork.create(movie_id: 74, network_id: 6)
+# mg = MovieGenre.create(movie_id: 74, genre_id: 6)
+# Movie.create({
+#   "watchmode_id": 1587484,
+#   "title": "The Dig",
+#   "plot": "As WWII looms, a wealthy widow hires an amateur archaeologist to excavate the burial mounds on her estate. When they make a historic discovery, the echoes of Britain's past resonate in the face of its uncertain future‎.",
+#   "media_type": "movie",
+#   "runtime_minutes": 112,
+#   "year": 2021,
+#   "user_rating": 7.2,
+#   "rating": "PG-13",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01587484_poster_w185.jpg",
+#   "streaming_url": "http://www.netflix.com/title/81167887",
+# })
+# mn = MovieNetwork.create(movie_id: 75, network_id: 6)
+# mg = MovieGenre.create(movie_id: 75, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 75, genre_id: 10)
+# Movie.create({
+#   "watchmode_id": 1526285,
+#   "title": "Invincible",
+#   "plot": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+#   "media_type": "tv_series",
+#   "runtime_minutes": 45,
+#   "year": 2021,
+#   "user_rating": 8.5,
+#   "rating": "TV-MA",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01526285_poster_w185.jpg",
+#   "streaming_url": "https://www.amazon.com/gp/video/detail/B08ZFQVHQY/ref=atv_dp_btf_el_prime_hd_tv_play_t1ADAAAAAA0wr0?",
+# })
+# mn = MovieNetwork.create(movie_id: 76, network_id: 1)
+# mg = MovieGenre.create(movie_id: 76, genre_id: 39)
+# mg = MovieGenre.create(movie_id: 76, genre_id: 7)
+# Movie.create({
+#   "watchmode_id": 1163858,
+#   "title": "Hereditary",
+#   "plot": "When Ellen, the matriarch of the Graham family, passes away, her daughter's family begins to unravel cryptic and increasingly terrifying secrets about their ancestry.",
+#   "media_type": "movie",
+#   "runtime_minutes": 127,
+#   "year": 2018,
+#   "user_rating": 6.9,
+#   "rating": "R",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01163858_poster_w185.jpg",
+#   "streaming_url": "https://www.showtime.com/#/movie/3473616",
+# })
+# mn = MovieNetwork.create(movie_id: 77, network_id: 7)
+# mg = MovieGenre.create(movie_id: 77, genre_id: 13)
+# mg = MovieGenre.create(movie_id: 77, genre_id: 17)
+# mg = MovieGenre.create(movie_id: 77, genre_id: 11)
+# Movie.create({
+#   "watchmode_id": 1583690,
+#   "title": "Mank",
+#   "plot": "1930s Hollywood is reevaluated through the eyes of scathing social critic and alcoholic screenwriter Herman J. Mankiewicz as he races to finish the screenplay of Citizen Kane.",
+#   "media_type": "movie",
+#   "runtime_minutes": 133,
+#   "year": 2020,
+#   "user_rating": 7,
+#   "rating": "R",
+#   "language": "English",
+#   "image": "https://cdn.watchmode.com/posters/01583690_poster_w185.jpg",
+#   "streaming_url": "http://www.netflix.com/title/81117189",
+# })
+# mn = MovieNetwork.create(movie_id: 79, network_id: 6)
+
+# mg = MovieGenre.create(movie_id: 79, genre_id: 7)
+# mg = MovieGenre.create(movie_id: 79, genre_id: 10)
+Movie.create({
+  "watchmode_id": 1582601,
+  "title": "Palm Springs",
+  "plot": "When carefree Nyles and reluctant maid of honor Sarah have a chance encounter at a Palm Springs wedding, things get complicated when they find themselves unable to escape the venue, themselves, or each other.",
+  "media_type": "movie",
+  "runtime_minutes": 90,
+  "year": 2020,
+  "user_rating": 7.5,
+  "rating": "R",
+  "language": "English",
+  "image": "https://cdn.watchmode.com/posters/01582601_poster_w185.jpg",
+  "streaming_url": "https://www.hulu.com/watch/f70dfd4d-dbfb-46b8-abb3-136c841bba11",
+})
+mn = MovieNetwork.create(movie_id: 80, network_id: 5)
+
+mg = MovieGenre.create(movie_id: 80, genre_id: 4)
+mg = MovieGenre.create(movie_id: 80, genre_id: 14)
+mg = MovieGenre.create(movie_id: 80, genre_id: 9)
+mg = MovieGenre.create(movie_id: 80, genre_id: 13)
+mg = MovieGenre.create(movie_id: 80, genre_id: 15)
