@@ -30,12 +30,23 @@ class Api::MoviesController < ApplicationController
     # network_movies = @network.movies
     # @movie = @m & genre_movies & network_movies
     # @final_movie = @movie.sample
+    # MVP - ALL PARAMS
+    # @m = Movie.where(year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type])
+    # @genre = Genre.find_by(name: params[:genre])
+    # @network = Network.find_by(name: params[:network])
+    # @movie = @m and @genre.movies and @network.movies
+    # @final_movie = @movie.sample
 
-    @m = Movie.where(year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type])
-    @genre = Genre.find_by(name: params[:genre])
-    @network = Network.find_by(name: params[:network])
-    @movie = @m and @genre.movies and @network.movies
-    @final_movie = @movie.sample
+    if params[:genre]
+      @final_movie = Movie.joins(:genres).where(genres: { name: params[:genre] }).sample
+      # Works if only network is selected
+    elsif params[:network]
+      @final_movie = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
+      # Works if one, some, all or none are selected unless genre/network are selcted
+    else
+      final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
+      @final_movie = Movie.where(final_params.compact).sample
+    end
 
     render "random.json.jb"
   end
@@ -73,21 +84,39 @@ class Api::MoviesController < ApplicationController
     # @final_movie = Movie.where(final_params.compact).sample
 
     # Works if only genre is selected
-    if params[:genre]
-      @final_movie = Movie.joins(:genres).where(genres: { name: params[:genre] }).sample
-      # Works if only network is selected
-    elsif params[:network]
-      @final_movie = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
-      # Works if one, some, all or none are selected unless genre/network are selcted
-    else
-      final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
-      @final_movie = Movie.where(final_params.compact).sample
-    end
+    # if params[:genre]
+    #   @final_movie = Movie.joins(:genres).where(genres: { name: params[:genre] }).sample
+    #   # Works if only network is selected
+    # elsif params[:network]
+    #   @final_movie = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
+    #   # Works if one, some, all or none are selected unless genre/network are selcted
+    # else
+    #   final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
+    #   @final_movie = Movie.where(final_params.compact).sample
+    # end
 
     # *WORK IN PROGRESS TO TIE ALL TOGETHER*
 
-    # final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type], genre: params[:genre], network: params[:network] }
-    # @final_movie = Movie.joins(:genres, :networks).where(final_params.compact).sample
+    # binding.pry
+    # if params[:genre]
+    #   @genre_movies = Movie.joins(:genres).where(genres: { name: params[:genre] }).sample
+    #   # @final_movie = @genre_movies
+    # end
+
+    # if params[:network]
+    #   @network_movies = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
+    #   # @final_movie = @network_movies
+    # end
+
+    # if final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
+    #   @filtered_movies = Movie.where(final_params.compact).sample
+    # end
+
+    # @final_movie = @filtered_movies & @genre_movies & @network_movies
+    # binding.pry
+    final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type], networks: { name: params[:network] }, genres: { name: params[:genre] } }
+
+    @final_movie = Movie.joins(:genres, :networks).where(final_params.compact).sample
 
     # @final_movie = Movie.joins(:genres, :networks).where(genres: { name: params[:genre] }, networks: { name: params[:network] }).sample
     # @final_movie = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
