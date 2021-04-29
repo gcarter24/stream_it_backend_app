@@ -1,0 +1,4 @@
+@movies.map do |movie| {
+  id: movie.id,
+  title: movie.title,
+} end

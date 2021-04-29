@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "/movies" => "movies#index"
     get "/movies/random" => "movies#random"
     get "/movies/test" => "movies#test"
+    # get "/movies/titles" => "movies#titles"
     get "/movies/:id" => "movies#show"
     get "/networks" => "networks#index"
     get "/networks/:id" => "networks#show"
