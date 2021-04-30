@@ -182,8 +182,8 @@ class Api::MoviesController < ApplicationController
   # elsif (@m = Movie.where(year: params[:year], media_type: params[:media_type])
   # @final_movie = @m.sample)
 
-  def titles
-    @movies = Movie.all
-    render "titles.json.jb"
+  def title
+    @movie = Movie.find_by(title: params[:title])
+    render "show.json.jb"
   end
 end
