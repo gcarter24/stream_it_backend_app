@@ -42,6 +42,8 @@ class Api::MoviesController < ApplicationController
       # Works if only network is selected
     elsif params[:network]
       @final_movie = Movie.joins(:networks).where(networks: { name: params[:network] }).sample
+      # elsif params[:network] && params[:genre]
+      #   @final_movie = Movie.joins(:genres, :networks).where(genres: { name: params[:genre] }, networks: { name: params[:network] }).sample
       # Works if one, some, all or none are selected unless genre/network are selcted
     else
       final_params = { year: params[:year], rating: params[:rating], language: params[:language], runtime_minutes: params[:runtime_minutes], media_type: params[:media_type] }
